@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# CalcPlanner - Construction Cost Estimator
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple React Native app for creating and managing construction cost estimates with material pricing per square meter.
 
-## Get started
+## Features
 
-1. Install dependencies
+- 📝 Create construction cost estimates
+- 🏗️ Material pricing per square meter
+- 💰 Labor cost calculations
+- 🎨 Finish cost management
+- 📊 PDF export functionality
+- 💾 Save and manage multiple estimates
+- ✏️ Edit existing estimates
+- 🌙 Dark theme UI
 
-   ```bash
-   npm install
-   ```
+## Getting Started
 
-2. Start the app
+### Prerequisites
 
-   ```bash
-   npx expo start
-   ```
+- Node.js (v16 or higher)
+- Expo CLI
+- iOS Simulator or Android Emulator
 
-In the output, you'll find options to open the app in a
+### Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone <repository-url>
+cd calcplanner
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Run on your preferred platform:
+   - Press `i` for iOS
+   - Press `a` for Android
+   - Press `w` for web
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Usage
 
-## Join the community
+### Creating an Estimate
 
-Join our community of developers creating universal apps.
+1. Go to the "Novo Orçamento" tab
+2. Enter a name for your estimate
+3. Select materials and enter quantities
+4. Set labor cost per square meter
+5. Add finish costs
+6. Save the estimate
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Managing Estimates
+
+- View all saved estimates in the "Orçamentos" tab
+- Edit existing estimates
+- Export to PDF
+- Delete estimates
+
+## Tech Stack
+
+- **React Native** with Expo
+- **TypeScript**
+- **AsyncStorage** for data persistence
+- **Expo Print** for PDF generation
+- **React Navigation** for tab navigation
+
+## Project Structure
+
+```
+app/
+├── _layout.tsx          # Tab navigation
+├── index.tsx           # New estimate screen
+├── orcamentos.tsx      # Estimates list screen
+├── types.ts            # TypeScript interfaces
+├── hooks/
+│   └── useOrcamentos.ts # Data management hook
+└── data/
+    └── materiaisDefault.ts # Default materials
+```
+
+## License
+
+MIT License
